@@ -14,7 +14,7 @@ egész osztás operátora: // (python2 ben is)
 
 fontos az indentálás (függvényeknél a scopeot jelöli)
 
-hosszab scripthet az elejére az elérési utat:
+hosszab scriptet az elejére az elérési utat:
 #!/usr/bin/env python3
 
 
