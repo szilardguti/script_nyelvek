@@ -2,13 +2,13 @@
 
 
 def int_fordit(i):
-    valasz = i[::-1]
+    valasz = str(i)[::-1]
     return int(valasz)
 
 
 def main():
-    i = input("Adjon meg egy pozitív egész számot: ")
-    valasz = int_fordit(i)
+    var = int(input("Adjon meg egy pozitív egész számot: "))
+    valasz = int_fordit(var)
     print("A szám megfordítva: " + str(valasz))
 
 
