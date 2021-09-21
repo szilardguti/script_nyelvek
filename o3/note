@@ -1,0 +1,37 @@
+tiszta függvények:
+    - nem módosítják a lokális változót
+    - nincs benne output/input (stringstreamek, stdout stdin módosítanák)
+    - ugyanolyan a kimeneti típus, mint a bemeneti
+    
+    
+variablenek adjunk jó nevet:)
+
+
+print függvényhez vannak opcionális paraméterek:
+    -sep=' ', end='\n' -> ezeket megváltoztatva lehet varázsolni
+    
+
+lista műveletek:
+    - .append() lista végére szúr be
+    
+    - .pop() listából kivesz és returnoli az értékét (alapból az utolsó elemet)
+    ( veremhez hasonló alapértelmezetten, sort is lehet csinálni )
+    
+    - sorted(list) - az eredeti objektum nem módosul, lehet lista vagy akármi
+        -> csökkenőben sorted(list, reverse=True)
+        -> mindig egy rendezett listát ad vissza
+        
+    - .sort() egy lista metódus 
+        -> nem ad vissza semmit
+        -> helyben rendez
+
+    -max(list), min(list), sum(list)
+    
+    - 'jel'.join(list) -> összekapcsolja a ''jel''-el a lista elemeit
+    
+    - s.split('jel') -> listát ad vissza, a ''jel'' mentén szétválaszotta a
+        sztringből
+                     -> ha nincs jel megadva a whitespace-ek mentén szedi szét
+    
+    
+miután kész a program refaktoroljuk, nézzen ki jól
