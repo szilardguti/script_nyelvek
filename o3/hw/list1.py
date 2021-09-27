@@ -17,7 +17,7 @@
 def match_ends(words):
     db = 0
     for e in words:
-        if (len(e) >= 2 and e[0] == e[len(e)-1]):
+        if len(e) >= 2 and e[0] == e[len(e)-1]:
             db += 1
     return db
 
@@ -27,7 +27,7 @@ def front_x(words):
     lsx = []
     lss = []
     for e in words:
-        if(e[0].lower() == 'x'):
+        if e[0].lower() == 'x':
             lsx.append(e)
         else:
             lss.append(e) 

@@ -2,17 +2,17 @@
 
 
 def palindrom_recur(s):
-    if(len(s) == 1):
-        return str(True)
+    if len(s) <= 1:
+        return True
     else:
-        if(s[0] == s[-1]):
+        if s[0] == s[-1]:
             return palindrom_recur(s[1:-1])
         else:
-            return str(False)
+            return False
 
 
 def main():
-    print(palindrom_recur(input("Adjon meg egy szót: ")))
+    print("A beírt szó palindrom:", palindrom_recur(input("Adjon meg egy szót: ")))
 
 
 if __name__ == "__main__":

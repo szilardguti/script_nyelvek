@@ -18,7 +18,7 @@ def decrypt(s):
     kod =   ['0', '1', '3', '4', '5', '7']
     dekod = ['O', 'I', 'E', 'A', 'S', 'T'] 
     for e in s:
-        if(e in kod):
+        if e in kod:
             megoldas.append(dekod[kod.index(e)])
         else:
             megoldas.append(e)

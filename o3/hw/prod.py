@@ -11,6 +11,9 @@ def product(numbers):
 def main():
     li = [1, 2, 3, 4, 5]
     print("Lista elemeinek szorzata:", product(li))
+    
+    lf = [1.4, 2.123, 3.412, 4.2, 5.0001]
+    print("Lista elemeinek szorzata:", product(lf))
 
 
 if __name__ == "__main__":

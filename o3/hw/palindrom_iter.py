@@ -4,8 +4,8 @@
 def palindrom_iter(s):
     i = 0
     while i < len(s)//2:
-        if(s[i] != s[len(s) - i - 1]):
-            return str(True)
+        if s[i] != s[len(s) - i - 1]:
+            return str(False)
         i += 1
     return str(True)
 
