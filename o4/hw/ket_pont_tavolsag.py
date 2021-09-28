@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+import math
+
+
+def distance(p1, p2):
+    return math.sqrt((abs(p1[0]-p2[0]))**2 + (abs(p1[1]-p2[1]))**2)
+
+ 
+def distance_not_in_one_row(p1, p2):
+    a = abs(p1[0] - p2[0])
+    b = abs(p1[1] - p2[1])
+    return math.sqrt(a**2 + b**2)
+
+
+def main():
+    p1 = (1, 2)
+    p2 = (6, 5)
+    print('A ket pont kozti tavolsag:', distance(p1, p2))
+    print('A ket pont kozti tavolsag(2):', distance_not_in_one_row(p1, p2))
+
+#############################################################################
+
+if __name__ == "__main__":
+    main()
+
