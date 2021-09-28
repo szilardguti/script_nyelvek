@@ -1,0 +1,35 @@
+sys.stdout.write("---") -> semmit nem tesz bele a kiiratásba
+
+range fgv.:
+
+    python2:
+        range(20) -> listát ad vissza, 20as felső limittel (már nincs benne)
+        range(1,5) -> [1, 2, 3, 4]
+        range(1,10,2) -> lépésköz is megadható (lehet negatív)
+        
+        for ciklusban is lehet használni:
+        for i in range(5) -> nagyobb számnál túl sok memória
+        for i in xrange(10000000000000000000) -> az adott indexű elemet foglalja csak
+        
+    python3:
+        itt már csak xrange van, range néven
+        iterátor! -> list(range(x)) = python2 range(x)
+        
+bool értékek:
+    True/False logikai konstansok
+    None a NULL/null, bármihez hozzárendelhető
+    False: 0, 0.0, üres string, üres lista/dictionary/taper -> minden egyéb True
+    
+tuple:
+    t = (a, b, c)
+    - lehet listaként minden műveletet (slice,..)
+    - de immutable, nem módosítható
+    - párhuzamos értékadás két tuple között (x, y) = ('a', 'b') | x, y = ('a','b') (value unpacking)
+    -> pythonban működik: (x, y) = (y, x)
+    - egy elemű tuple: ("asd",) (különben csak string)
+    - általában különb. típusú elemeket rakunk bele, több értéket így adjunk meg
+    
+list comprehension:
+    listát lehet előállítani olvashatóan:
+    [ expr for var in list ] -> [ n*n for n in numbers ] négyzetszámokat egy listában
+    opcionális if et is tudunk a végére rakni
