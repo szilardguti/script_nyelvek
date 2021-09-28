@@ -55,9 +55,38 @@ def feladat9():
     print(result)
         
 
+def feladat10():
+    result = [ i for i in range(10) if i%2 == 0 ]
+    print(result)
     
     
+def feladat11():
+    result = [ i**2 for i in range(20) if i**2%2 == 0 ]
+    print(result)
     
+    
+def feladat12():
+    result = [ i**2 for i in range(20) if str(i**2)[-1] == '4' ]
+    print(result)
+    
+    
+def feladat13():
+    result = ''.join([ chr(i) for i in range(65, 65+26) ])
+    print(result)
+    
+    
+def feladat14():
+    ls = [' apple ', ' banana ', ' kiwi']
+    result = [ s.strip() for s in ls ]
+    print(result)
+        
+        
+def feladat15():
+    lb = [1, 0, 1, 1, 0, 1, 0, 0]
+    result = ''.join([ str(i) for i in lb ])
+    print(result)    
+    
+        
 def main():
     feladat1()
     feladat2()
@@ -68,8 +97,12 @@ def main():
     feladat7()
     feladat8()
     feladat9()
-
-
+    feladat10()
+    feladat11()
+    feladat12()
+    feladat13()
+    feladat14()
+    feladat15()
 
 if __name__ == "__main__":
     main()
