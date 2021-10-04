@@ -2,8 +2,8 @@
 
 
 def diamond(i):
-    if i % 2 == 0:
-        print("A megadott szám nem páratlan!")
+    if i % 2 == 0 or i < 0:
+        print("A megadott szám érvénytelen!")
         return False
     else:
         rows = [ '*' * n for n in list(range(1, i+1, 2))+list(range(i-2, 0, -2)) ]
