@@ -1,0 +1,49 @@
+string bufferezés:
+    kis substringekből összepakolok egy bazinagy stringet
+    így a garbage collectornak nem kell 1000 új stringobjektumot fellapátolni
+    
+    
+long:
+    python2-ben int 64bites de overflow esetén long-ra módosít 123..23L
+    python3-ban összevonták az int és a long típusokat
+    
+
+if / elif / else:
+    "else if" helyett lehet elif-et használni
+    len("else") = len("elif")
+    
+    
+enumerate(lista, start=0):
+    egy listát megadva elemeket generál egyenként egy indexet elérakva
+    (0, lista[0])
+    (1, lista[1])
+    (2, lista[2])
+    -> for-ban két elemet is ki lehet venni: for index, elem in enumarate(ls)
+    
+    
+break / continue / pass:
+    break megszakítja a ciklust
+    continue továbbdobja egy lépéssel a ciklust
+    pass egy üres utasítás, ha rákerül az utasítás nem fog semmitse csinálni #TODO
+    
+    
+docstring:
+    dokumentálni kell a kódunkat
+    a függvény szignatúra után egy vagy több sor röviden összefoglalva
+    def fv():
+    """docstring
+    
+    hello"""
+    help(fv)-nél ezt a docstringet adja vissza, amúgy fv.__doc__ módon is
+    visszakapható
+    
+    
+opcionális függvény paraméter:
+    fv(var1, opcionalis = alapertek)
+    amennyiben az opcionalis erteket megadom, akkor azzal fog működni
+    ha kiírjuk az opc. param. nevét akkor nem számít a sorrend, viszont nem kötelező kiírni, ilyenkor számít a sorrend
+    
+    
+assertek:
+    assert után megadhatunk bármilyen feltételt, ha az teljesül a program tovább megy, ha nem teljesül meghal és elszáll egy hibaüzenettel
+    production kódban ez nem elfogadható, saját kis kódban okés

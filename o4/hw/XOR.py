@@ -4,6 +4,8 @@
 def XOR(var1, var2):
     return ((bool(var1) and not bool(var2)) or (not bool(var1) and bool(var2)))
 
+def XOR_simpler(var1, var2) #definíció szerint
+    return bool(var1) != bool(var2)
 
 def main():
     str1 = "python"

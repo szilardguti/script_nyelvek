@@ -14,7 +14,7 @@ def hangrend(s):
                 magdb += 1
     
     if melydb > 0 and magdb == 0:
-        return "mély"
+        return "mély" # szebb lenne nevesített constanssal - MAGAS akár enumban
     if magdb > 0 and melydb == 0:
         return "magas"
     if magdb > 0 and melydb > 0:
