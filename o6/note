@@ -1,0 +1,30 @@
+unit tesztelés:
+    függvények, osztályok tesztelése
+    - from <file_nev> import <függvények>
+    - pytest a test_* nevű fájlokat keresi -> pytest parancs megkeresi és leteszteli
+    - assertekkel kell a teszteket megírni
+    
+
+halmazok: {krumplicskák}
+    - minden eleme unique, nincs sorrendben
+    - set() paranccsal hozhazó létre - megadható lista is
+    - len(), list() működik rá
+    - az 'in' operátor nagyon gyors nagy halmaznál
+    - .add(elem), .remove(elem)
+       a.union(b) -> halmazműveletek - a halmazok nem módosulnak
+       a.intersection(b) 
+       a.difference(b)
+       
+       
+dictionary (hashmap):
+    - kulcs:érték párokat tudunk tárolni    -> hash táblázat adatszerk.
+    - d = {} -> üres dict
+    - d['kulcs'] = 'érték'
+    - python3 óta tartja a sorrendet, pedig hashalést alkalmaz
+    - d['x'] - ha nincs x kulcsunk ez kivételt dob -> d.get('x') - None return
+        -> d.get('x', "nincs") -ha nincs benne az x kulcs akkor a második paramt return
+    - d.keys() visszaadja az össze kulcsot iterátorban
+    - d.values() hasonlóan iterátorban az értékeket
+    - d.items() tuple-eket ad vissza
+    - del -> egy változót végleg ki lehet törölni
+        -> del d['a'] -> kitörli a kulcsot és az értéket is
