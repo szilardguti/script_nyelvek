@@ -65,11 +65,17 @@ and bacon and eggs is what I want, and that head up there for to watch
 ships off. What you mought call me? You mought call me captain. Oh, I see
 what you're at-- there"; and he threw down three or four gold pieces on
 the threshold. "You can tell me when I've worked through that," says he,
-looking as fierce as a commander."""
+looking as fierce as a commander.""".strip().split()
 
 def main():
-    # TODO...
-    pass
+    d = {}
+    for s in TEXT:
+        t = s.lower()
+        if t not in d:
+            d[t] = 0
+        d[t] += 1
+    for k,v in sorted(d.items()):
+        print(k,v)
 
 #############################################################################
 
