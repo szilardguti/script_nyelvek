@@ -23,7 +23,7 @@ def M_calc2(n):
 
 
 def main():
-    print(M_numbers(5000))
+    print(M_numbers(1000000))
 
 
 if __name__ == "__main__":

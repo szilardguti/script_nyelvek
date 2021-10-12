@@ -5,9 +5,9 @@ import sys
 def main():
     alphabet = ''.join([chr(i) for i in range(97,97+26)])
     
-    if sys.argv[0][2:2+3] == "a-z":
+    if "a-z" in sys.argv[0]:
         print(alphabet)
-    elif sys.argv[0][2:2+3] == "z-a":
+    elif "z-a" in sys.argv[0]:
         print(alphabet[::-1])   
 
 
