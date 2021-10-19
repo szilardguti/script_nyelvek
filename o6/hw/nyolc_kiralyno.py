@@ -20,8 +20,9 @@ def main():
     print(li)
     draw_queens(li)
     
-    print(li)
+    
     li = [7,3,0,2,5,1,6,4]
+    print(li)
     draw_queens(li)
 
 
