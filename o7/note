@@ -1,0 +1,31 @@
+zip: (iterátor, mint a range)
+    - iterálható objekteket lehet neki megadni
+    - összepárosítja az egyenlő indexen lévő elemeket egy tuple-be
+    - ha valamelyik hosszabb, azt csonkolja -> min(a,b) lesz a hossza
+    
+    
+globális változók, stb.:
+    - konstans -> nagybetűvel (csak megegyezés, nincs alapból)
+    - kisbetűvel a scope-okon kívül globális változó
+    - elsőnek lokális változókat keres, csak utána a globálisokat
+    - globálisokat ne nagyon módosítsuk, ha mégis kell, akkor 'global' kulcsszóval jelezzük
+
+
+file kezelés:
+    - f = open("<file nev>", "r") ("r" -> read, lehet még append,...)
+    - végén zárjuk be f.close()-t meghívva
+    - az f ilyenkor egy fájlkezelő objekt
+    - a beolvasott sorok végén lesz sortörés -> line.rstrip('\n') érdemes leszedni
+    - f.readlines() -> listát ad vissza, ahol az elemek az egyes sorok (\n!)
+    - f.read() -> egész tartalmat egy sztringben adja vissza (.splitlines())
+    - nagy fileok esetén inkább for ciklussal járjuk be:
+        for line in f (f = open(...))
+    - ha megszakad a program(hibakezelés), nem záródik be normálisan, hiba lehet
+
+    - írás: f = open("out.txt", "w") (w -> write)
+            print("teszt",file= f) -> sortörést rak a végére, print!
+    - vagy f.write() -> csak sztringet lehet megadni, nem ad hozzá semmit
+    - elsőnek csak egy pufferbe ír, bezárás után rakja ki a file-ba!
+    - modernebb módszer megnyitásra:
+        with open(INPUT, "r") as f: -> ha ebből a bitblockból kilépünk automatikusan hívja a f.close()-t
+    - alapból UTF-8-ban értelmezi, open(..., encoding='<uj encode>')
