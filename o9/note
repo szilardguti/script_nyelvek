@@ -1,0 +1,45 @@
+osztályok:
+    - a python OO nyelv, eddig procedurálisan hívogattunk függvényeket
+    - minden példányváltozó és példánymetódus publikus, virtuális
+    - olcsó átadni, mert referenciát passol
+    - felülírhatóak a beépített operátorok
+    - többszörös öröklődés van, gráf alakú (c++ ban is)
+    - python3-ban nem kell feltűntetni az object ősosztályt
+ 
+    - class NagyBetu: -> ez a szintaxis
+    - egy példánymetódus első paramétere 'self'-nek kell lennie (self reference)
+        -> java-ban ez a this
+        -> hívás helyén ezt nem írjuk ki
+    - attribútumokat dinamikusan hozza létre, bármelyik példánymetódusban
+    - konstruktor:
+        -> a neve '__init__' legyen
+        -> innentől hasonló a többi példánymetódushoz
+        -> igazából a memóriafoglalós konstruktor az ősosztályban, az object-ben
+           van, az hívja majd az init-et
+
+           
+konténer osztály:
+    - más objektumokat tudunk belepakolni (list, set, dict., tuple)
+    - print(obj)-nél egy memória címet kapunk, toString-et át kell írni
+        -> __str__(self): itt kell retulnölni
+        -> hasonlóan stringet kell visszaadnia
+
+        
+private megegyezés:
+    - ha valamit _name hez hasonlóan nevezünk el, azt nem-publikusként
+      kell kezelnünk, amúgy publikus marad
+
+      
+accessors (getter/setter):
+    - nincs rá szükség, minden publikus amúgy is
+
+
+speciális metódusok:
+    - "__"-el kezdődnek, dundernek nevezik
+    - ezzel kell megvalósítani az operátor túlterhelést is
+        -> pl hogy if után írva mit ad vissza __bool__
+        -> '<' operátor -> __lt__(self, obj): innentől tudja kezelni
+        
+    
+destructor:
+    - nincs, majd a garbage collector összeszedi, nem tudjuk befolyásolni, hogy mikor
