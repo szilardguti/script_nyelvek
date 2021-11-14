@@ -3,7 +3,7 @@
 
 class MyQueue:
     def __init__(self):
-        self._bemenet_stack = Verem()
+        self._bemenet_stack = Verem() #verem.py-ban található verem
         self._kimenet_stack = Verem()
         
         
@@ -46,7 +46,7 @@ class MyQueue:
         return result + ']'
     
     
-class Verem: #verem.py-ban található verem
+class Verem: 
     def __init__(self):
         self._stack = []
         
@@ -79,7 +79,7 @@ class Verem: #verem.py-ban található verem
 
 def main():
     q = MyQueue()           # üres sor létrehozása
-    print(q                 # ]
+    print(q)                # ]
     print(q.is_empty())     # True
     q.append(1)
     q.append(5)
