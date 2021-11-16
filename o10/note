@@ -1,0 +1,18 @@
+modulok:
+    - a hosszabb projekteket jobb lenne szétvágdosni kisebbekre
+    - így könnyebb karbantartani, a hasznos fv.-et be tudjuk hivatkozni ezpz
+    
+    - import paranccsal tudunk behúzni külső modulokat -> ha csak ennyit írunk a szimbólum táblázatba még nem kerül be -> modul.függvény() ként már megismeri
+    - modulnál nem kell kiterjesztést írni 
+    - egy beimportált modulnak lehet alias-t adni -> import modul as md
+    - ha csak egy függvényt, vagy nem akarom a modult mindig leírni, akkor használhatunk -> from <modul> import <függvény>
+        -> a függvény helyére lehetne *-ot is rakni, bad riddance
+    - tudunk a modulba is egy tesztet írni, ha közvetlenül azt futtatjuk, akkor ez a __name__ == "__main__" alatti rész fut le
+    
+    - __name__ változó -> ha közvetlen futtatjuk akkor __main__ értékű
+        -> modulként behivatkozva akkor a modul neve lesz -> import pygyak
+        -> pygyak.__name__ -> pygyak
+        
+        
+random számok:
+    -

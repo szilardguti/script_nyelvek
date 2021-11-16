@@ -43,3 +43,18 @@ speciális metódusok:
     
 destructor:
     - nincs, majd a garbage collector összeszedi, nem tudjuk befolyásolni, hogy mikor
+    
+
+osztály változó/metódus:
+    - magához az osztályhoz tartozik
+    - Test.i -> így is lehet használni
+    
+
+öröklődés:
+    - class Test(ŐsOsztály):
+    - többszörös öröklődés, de inkább ne használjuk
+
+    
+enumok:
+    -> from enum import Enum, auto
+    - good practice használni
