@@ -12,7 +12,16 @@ modulok:
     - __name__ változó -> ha közvetlen futtatjuk akkor __main__ értékű
         -> modulként behivatkozva akkor a modul neve lesz -> import pygyak
         -> pygyak.__name__ -> pygyak
-        
+     
+     
+type annotation:
+    "def add(a: int, b: int) -> int"
+    - így csak integerekkel lenne helyes a függvény, azonban a python3 interpreter figyelmen kívül hagyja
+    - a mypy project ezeket nézi (statikus elemző) -> nem futtatja a forráskódot
+    - csak a teljesen annotált signatúrájú függvényeket elemzi, a többire nem dob hibát
+    - from typing import List,Union,Tuple
+    -> List[int], ha valamelyik két típus közül akkor Union[int, str], bármi Any, Optional[str] ez lehet none is = Union[None, str]
+    - ha nagyon komplikált lenne meg lehet adni egy speciális megjegyzést # type : ignore
         
 random számok:
     -
