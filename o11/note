@@ -1,0 +1,32 @@
+random számok:
+    import random
+    - random.random() -> [) random valós szám
+    - random.randint() -> [] random intet ad vissza
+    - random.randrange() -> [) jobbról nyílt intervallumba
+    - random.shuffle(<list>) -> a listát helybe módosítja
+    - random.choice(<list>) -> lista random elemét adja vissza
+
+    
+haladó rendezés:
+    - sorted()-nek van egy key opcionális paramétere is
+    - az elemeket transzformálni fogja, a rendezés a visszakapott érték alapján
+    pl: sorted(words, key=len) -> a szavak hossza alapján rendezi (proxy values)
+    - key lehet sokféle, str.lower vagy saját függvény
+    - lépései: -> minden elemre meghívja a megadott függvényt
+               -> létrehozza egy proxy listába
+               -> rendezi a párosított proxy listát
+               -> visszahelyettesít az eredeti listából -> végeredmény
+    - megadható lambda fvg is:
+        -> lambda(s: s[-1]) -> bemenet:kimenet
+        -> a kimenet egy kifejezés lehet, semmi bonyolultabb
+        
+
+kivételek:
+    - OO nyelvekhez megszokotthoz hasonlóan megy az exception throw
+    - lényege hogy ne termináljon egy üzenettel
+    - általában user inputnál kell, mindig rosszat fognak megadni
+    - try: -> except <kiváltott kivétel típusa>:
+    (catch helyett except kapja el a kivételt)
+    - így már nem terminál, hanem lekezi
+    - az elkapott kivétel hozzárendelhető egy változóhoz 'as' után
+    - többféle kivételt akarunk lekezelni, az összes kivételt egy tuple-be
