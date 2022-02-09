@@ -1,0 +1,34 @@
+Weboldalak letöltése:
+    import urllib.request
+    
+    response = urllib.request.urlopen(url)
+    felveszi a kapcsolatot a webszerverrel
+    
+    response.read() -> byte sorozatot ad vissza, dekódolni kell .decode('utf-8')
+                       így már string lesz
+                       
+    .urlretrieve(URL, hova) -> letölti a képet és lementi
+    -> akár wget-et is lehet (külső processz elindítunk a scripttel -> import os)
+    
+    requests modul, külső modul, könnyebbé teszi a webes letöltést:
+    -> kapcsolat felvétel: r = requests.get(URL)
+    -> elérhető a html = r.text
+    
+    
+    print(flush = True) -> így nem cache-el, egyből kiköpi a képernyőre
+    
+    
+JSON formátum:
+    - szerializáció: tárolható formátumban akarjuk elrakni az adatokat, amit majd fel lehet használni
+    - JSON programok komm.-ra jól használható, jól olvasható
+    - XML <-> JSON
+    - az adatok kulcs:érték párok, {} -> objectum, [] -> tömb
+    beolvasás:
+        import json
+        f = open(<file neve>) #alapból read
+        
+        d = json.load(f) -> dictionary-t ad vissza
+        d = json.loads(jsonstring)
+        
+    kiirás:
+        json.dump(<adatszerkezet>, <filekezelo>)
